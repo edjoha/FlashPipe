@@ -1,0 +1,6 @@
+name: alignment
+channels:
+  - bioconda
+dependencies:
+  - STAR
+  - samtools
