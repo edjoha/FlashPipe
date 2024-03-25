@@ -1,0 +1,19 @@
+#This is a Snakefile for analyzing FlashSeq Low amplification data containing 3 steps
+import pandas as pd
+import os
+
+# Variable declaration
+OUTDIR = config["out"]
+TEMPDIR = config["temp"]
+#LOGDIR = config["log"]
+
+# -- Read samples file -- #
+samples = pd.read_csv(config["samples"], sep="\t", comment="#").set_index("sample", drop=False)
+
+# -- Final output -- #
+rule all:
+    input:
+        expand(["{OUTDIR}/{run}/bam/{cond}_{sample}_Aligned.sortedByCoord.filtered.bam",
+                "{OUTDIR}/{run}/count/{cond}_{sample}_ReadCount.featureCounts.gencode.txt",
+                ], run=samples['run'], sample=samples['cell'] + '_' + samples['sample'], cond=samples['condition'], OUTDIR=OUTDIR)
+
