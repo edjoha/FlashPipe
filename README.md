@@ -1,2 +1,2 @@
-# FlashPipe ⚡![pipe](https://cdn.emojidex.com/emoji/hdpi/pipe.png "pipe")
+# Flash⚡Pipe
 a snakemake based analysis pipeline for FlashSeq data
