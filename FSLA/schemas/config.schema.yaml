@@ -25,9 +25,9 @@ properties:
     type: object
     properties:
       threads:
-        type: integer
+        type: number
       RAMlimit:
-        type: integer
+        type: number
       genomeLoad:
         type: string
       genomeDir:
@@ -35,7 +35,7 @@ properties:
       readfiles:
         type: string
       insertlimit:
-        type: integer
+        type: number
       filter:
         type: string
       outdtype:
@@ -57,9 +57,9 @@ properties:
     type: object
     properties:
       threads:
-        type: integer
+        type: number
       flag:
-        type: integer
+        type: number
     required:
       - threads
       - flag
@@ -70,11 +70,11 @@ properties:
       GTF:
         type: string
       overlap:
-        type: float
+        type: number
       datatype:
         type: string
       nthreads:
-        type: integer
+        type: number
       geneidentifier:
         type: string
     required:

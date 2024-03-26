@@ -13,12 +13,12 @@ properties:
   cell:
     type: string
     description: cell number
-  condition:
+  cond:
     type: string
     description: sample condition (i.e. WT, treated)
 
 # columns that the config/samples.tsv file must have to pass schema validation
 required:
   - sample
-  - condition
+  - cond
   - run
