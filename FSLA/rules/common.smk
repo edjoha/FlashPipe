@@ -1,5 +1,4 @@
-from snakemake.utils import validate
-from pathlib import Path
+#from pathlib import Path
 import pandas as pd
 
 ##### load config and sample sheets #####
