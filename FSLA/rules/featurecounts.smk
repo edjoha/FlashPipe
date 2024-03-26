@@ -7,7 +7,7 @@ rule counts:
     conda:
         "../envs/subread.yaml"
     params:
-        gtf=congig['GTF'],
+        gtf=config['featurecounts']['GTF'],
         overlap=config['featurecounts']['overlap'],
         dtype=config['featurecounts']['datatype'],
         nthreads=config['featurecounts']['nthreads'],
