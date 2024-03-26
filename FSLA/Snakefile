@@ -2,16 +2,16 @@
 import pandas as pd
 import os
 
-# Variable declaration
-OUTDIR = config["out"]
-TEMPDIR = config["temp"]
-#LOGDIR = config["log"]
-
 # -- Rule files -- #
 include: "rules/cat.smk"
 include: "rules/align.smk"
 include: "rules/featurecounts.smk"
 include: "rules/common.smk"
+
+# Variable declaration
+OUTDIR = config["out"]
+TEMPDIR = config["temp"]
+#LOGDIR = config["log"]
 
 # -- Final output -- #
 rule all:
