@@ -3,10 +3,10 @@ import pandas as pd
 import os
 
 # -- Rule files -- #
+include: "rules/common.smk"
 include: "rules/cat.smk"
 include: "rules/align.smk"
 include: "rules/featurecounts.smk"
-include: "rules/common.smk"
 
 # Variable declaration
 OUTDIR = config["out"]

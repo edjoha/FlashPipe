@@ -5,82 +5,83 @@ description: snakemake configuration file
 type: object
 
 # possible entries of the config file and which type they should be
-samples:
-  type: string
-temp:
-  type: string
-out:
-  type: string
+properties:
+  samples:
+    type: string
+  temp:
+    type: string
+  out:
+    type: string
 
-cat:
-  type: object
-  properties:
-    enable:
-      type: boolean
-  required:
-    - enable
+  cat:
+    type: object
+    properties:
+      enable:
+        type: boolean
+    required:
+      - enable
 
-star:
-  type: object
-  properties:
-    threads:
-      type: integer
-    RAMlimit:
-      type: integer
-    genomeLoad:
-      type: string
-    genomeDir:
-      type: string
-    readfiles:
-      type: string
-    insertlimit:
-      type: string
-    filter:
-      type: string
-    outdtype:
-      type: string
-    prefix:
-      type: string
-  required:
-    - threads
-    - RAMlimit
-    - genomeLoad
-    - genomeDir
-    - readfiles
-    - insertlimit
-    - filter
-    - outdtype
-    - prefix
+  star:
+    type: object
+    properties:
+      threads:
+        type: integer
+      RAMlimit:
+        type: integer
+      genomeLoad:
+        type: string
+      genomeDir:
+        type: string
+      readfiles:
+        type: string
+      insertlimit:
+        type: integer
+      filter:
+        type: string
+      outdtype:
+        type: string
+      prefix:
+        type: string
+    required:
+      - threads
+      - RAMlimit
+      - genomeLoad
+      - genomeDir
+      - readfiles
+      - insertlimit
+      - filter
+      - outdtype
+      - prefix
 
-samtools:
-  type: object
-  properties:
-    threads:
-      type: integer
-    flag:
-      type: integer
-  required:
-    - threads
-    - flag
+  samtools:
+    type: object
+    properties:
+      threads:
+        type: integer
+      flag:
+        type: integer
+    required:
+      - threads
+      - flag
 
-featurecount:
-  type: object
-  properties:
-    GTF:
-      type: string
-    overlap:
-      type: float
-    datatype:
-      type: string
-    nthreads:
-      type: integer
-    geneidentifier:
-      type: string
-  required:
-    - GTF
-    - overlap
-    - nthreads
-    - geneidentifier
+  featurecount:
+    type: object
+    properties:
+      GTF:
+        type: string
+      overlap:
+        type: float
+      datatype:
+        type: string
+      nthreads:
+        type: integer
+      geneidentifier:
+        type: string
+    required:
+      - GTF
+      - overlap
+      - nthreads
+      - geneidentifier
 
 # entries that have to be in the config file for successful validation
 required:

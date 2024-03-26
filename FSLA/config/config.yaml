@@ -20,7 +20,7 @@ star:
   insertlimit: 2000000
   filter: RemoveNoncanonicalUnannotated
   outdtype: BAM SortedByCoordinate
-  prefix: {TEMPDIR}/bam/{run}_FSLA_{cond}_{sample}
+  prefix: "{TEMPDIR}/bam/{run}_FSLA_{cond}_{sample}"
 
 # --- c. samtools --- #
 samtools:
