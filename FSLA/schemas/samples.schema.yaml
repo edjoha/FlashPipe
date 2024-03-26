@@ -1,0 +1,24 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+description: items in the sample sheet
+
+# columns that the config/samples.tsv file can have and which type they should be
+properties:
+  sample:
+    type: string
+    description: sample name/identifier
+  run:
+    type: string
+    description: sequencing run identifier
+  cell:
+    type: string
+    description: cell number
+  condition:
+    type: string
+    description: sample condition (i.e. WT, treated)
+
+# columns that the config/samples.tsv file must have to pass schema validation
+required:
+  - sample
+  - condition
+  - run
