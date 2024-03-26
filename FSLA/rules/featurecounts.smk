@@ -8,4 +8,6 @@ rule counts:
             dtype=config['featurecounts']['datatype'],
             nthreads=config['featurecounts']['nthreads'],
             geneid=config['featurecounts']['geneidentifier']
-    shell: featureCounts -T {params.nthreads} -p --countReadPairs -t {params.dtype} -g {params.geneid} --fracOverlap {params.overlap} -a {params.gtf} -o {output.bam} {output.count}
+    shell:
+        featureCounts -T {params.nthreads} -p --countReadPairs -t {params.dtype} -g {params.geneid} --fracOverlap {params.overlap} -a {params.gtf} -o {output.bam} {output.count}
+        rm -rf -R {TEMPDIR}

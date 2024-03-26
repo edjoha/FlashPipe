@@ -7,8 +7,10 @@ OUTDIR = config["out"]
 TEMPDIR = config["temp"]
 #LOGDIR = config["log"]
 
+
+
 # -- Read samples file -- #
-samples = pd.read_csv(config["samples"], sep="\t", comment="#").set_index("sample", drop=False)
+#samples = pd.read_csv(config["samples"], sep="\t", comment="#").set_index("sample", drop=False)
 
 # -- Final output -- #
 rule all:
