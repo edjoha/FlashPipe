@@ -1,9 +1,8 @@
 
 # -- 1. Samples configuration -- #
 samples: "config/samples.tsv"
-temp: "/data/gpfs-1/users/hedler_m/scratch/fsla/out"
-out: "/data/gpfs-1/users/hedler_m/ag_ludwig/work/FSLA"
-#log: "/data/gpfs-1/users/hedler_m/scratch/fsla/log" 
+temp: "/data/gpfs-1/users/hedler_m/scratch/fsla"
+out: "/data/gpfs-1/users/hedler_m/ag_ludwig/work/FSLA" 
 
 # -- 2. Analysis parameters -- #
 # --- a. (optional) cat reads from different lanes --- #
@@ -20,7 +19,7 @@ star:
   insertlimit: 2000000
   filter: RemoveNoncanonicalUnannotated
   outdtype: BAM SortedByCoordinate
-  prefix: "{TEMPDIR}/bam/{run}_FSLA_{cond}_{sample}"
+  prefix: "{TEMPDIR}/{run}/tmp/bam/out/FSLA_{cond}_{name}_"
 
 # --- c. samtools --- #
 samtools:

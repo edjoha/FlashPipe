@@ -16,7 +16,6 @@ TEMPDIR = config["temp"]
 # -- Final output -- #
 rule all:
     input:
-        expand(["{TEMPDIR}/bam/{run}/{cond}/FSLA_{cond}_{name}_Aligned.sortedByCoord.filtered.bam",
-                "{TEMPDIR}/count/{run}/{cond}/FSLA_{cond}_{name}_ReadCount.featureCounts.gencode.txt",
-                ], run=samples['run'], cond=samples['cond'], sample=samples['name'], TEMPDIR=TEMPDIR)
+        expand(["{TEMPDIR}/counts/{run}/{cond}/FSLA_{cond}_{name}_ReadCount.featureCounts.gencode.txt",
+                ], run=samples['run'], cond=samples['cond'], name=samples['name'], TEMPDIR=TEMPDIR)
 
