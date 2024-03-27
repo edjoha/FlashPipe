@@ -28,7 +28,7 @@ samtools:
 
 # --- d. featurecounts --- #
 featurecounts:
-    GTF: "/data/gpfs-1/users/hedler_m/repos/FlashPipe/FSLA/data/gencode.v43.primary_assembly.basic.annotation.gtf"
+    GTF: "/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/human_ref/gencode.v43.primary_assembly.basic.annotation.gtf"
     overlap: 0.25
     datatype: exon
     nthreads: 1

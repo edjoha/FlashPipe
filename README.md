@@ -25,11 +25,11 @@ They all belong to PRJNA816486, published online by Hahaut et al. 2022.
 
 ### GTF
 
-The GTF file is provided to facilitate pipeline setup. It was generated with STAR --genomeGenerate
+The GTF file was generated with STAR --genomeGenerate
 
 FASTA="../GRCh38.primary_assembly.genome.fa"
 GTF="../gencode.v43.primary_assembly.basic.annotation.gtf"
 
 STAR --runThreadN 15 --runMode genomeGenerate --genomeDir $OUTPUTDIR --genomeFastaFiles $FASTA --sjdbGTFfile $GTF --sjdbOverhang 79
 
-
+Therefore, the latest release of the FASTA sequence file for the human genome was downloaded on https://www.gencodegenes.org/human/ (Release 45 (GRCh38.p14)). Due to the file size limit on Github, this file cannot be provided here.
