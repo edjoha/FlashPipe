@@ -1,6 +1,6 @@
 rule counts:
     input:
-        "{TEMPDIR}/{run}/bam/filtered/FSLA_{cond}_{sample}_Aligned.sortedByCoord.filtered.bam"
+        "{TEMPDIR}/{run}/tmp/bam/filtered/{name}_Aligned.sortedByCoord.filtered.bam"
     output:
         bam="{TEMPDIR}/bam/{run}/{cond}/{name}_Aligned.sortedByCoord.filtered.bam",
         counts="{TEMPDIR}/count/{run}/{cond}/{name}_ReadCount.featureCounts.gencode.txt"
