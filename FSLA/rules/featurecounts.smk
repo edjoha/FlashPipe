@@ -1,9 +1,9 @@
 rule counts:
     input:
-        "{TEMPDIR}/bam/filtered/{run}_FSLA_{cond}_{sample}_Aligned.sortedByCoord.filtered.bam"
+        "{TEMPDIR}/{run}/bam/filtered/FSLA_{cond}_{sample}_Aligned.sortedByCoord.filtered.bam"
     output:
-        bam="{OUTDIR}/{run}/bam/{cond}_{sample}_Aligned.sortedByCoord.filtered.bam",
-        count="{OUTDIR}/{run}/count/{cond}_{sample}_ReadCount.featureCounts.gencode.txt"
+        bam="{TEMPDIR}/bam/{run}/{cond}/{name}_Aligned.sortedByCoord.filtered.bam",
+        count="{TEMPDIR}/count/{run}/{cond}/{name}_ReadCount.featureCounts.gencode.txt"
     conda:
         "../envs/subread.yaml"
     params:

@@ -16,7 +16,7 @@ TEMPDIR = config["temp"]
 # -- Final output -- #
 rule all:
     input:
-        expand(["{OUTDIR}/{run}/bam/{cond}_{sample}_Aligned.sortedByCoord.filtered.bam",
-                "{OUTDIR}/{run}/count/{cond}_{sample}_ReadCount.featureCounts.gencode.txt",
-                ], run=samples['run'], sample=samples['cell'] + '_' + samples['sample'], cond=samples['cond'], OUTDIR=OUTDIR)
+        expand(["{TEMPDIR}/bam/{run}/{cond}/{name}_Aligned.sortedByCoord.filtered.bam",
+                "{TEMPDIR}/count/{run}/{cond}/{name}_ReadCount.featureCounts.gencode.txt",
+                ], run=samples['run'], cond=samples['cond'], sample=samples['name'], TEMPDIR=TEMPDIR)
 

@@ -16,9 +16,13 @@ properties:
   cond:
     type: string
     description: sample condition (i.e. WT, treated)
+  name:
+    type: string
+    description: sample name without lane and read info
 
 # columns that the config/samples.tsv file must have to pass schema validation
 required:
   - sample
   - cond
   - run
+  - name

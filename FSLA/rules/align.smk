@@ -7,7 +7,7 @@ rule samtools:
         "../envs/alignment.yaml"
     params:
         nthreads=config['samtools']['threads'],
-        flags=config['samtools']['flag'],
+        flag=config['samtools']['flag'],
     shell:
         """samtools view -@ {params.nthreads} -Sb -F {params.flag} {input} > {output}
         samtools index {output}"""
