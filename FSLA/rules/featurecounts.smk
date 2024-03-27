@@ -3,7 +3,7 @@ rule counts:
         "{TEMPDIR}/{run}/bam/filtered/FSLA_{cond}_{sample}_Aligned.sortedByCoord.filtered.bam"
     output:
         bam="{TEMPDIR}/bam/{run}/{cond}/{name}_Aligned.sortedByCoord.filtered.bam",
-        count="{TEMPDIR}/count/{run}/{cond}/{name}_ReadCount.featureCounts.gencode.txt"
+        counts="{TEMPDIR}/count/{run}/{cond}/{name}_ReadCount.featureCounts.gencode.txt"
     conda:
         "../envs/subread.yaml"
     params:
@@ -13,5 +13,5 @@ rule counts:
         nthreads=config['featurecounts']['nthreads'],
         geneid=config['featurecounts']['geneidentifier']
     shell:
-        """featureCounts -T {params.nthreads} -p --countReadPairs -t {params.dtype} -g {params.geneid} --fracOverlap {params.overlap} -a {params.gtf} -o {output.bam} {output.count}
+        """featureCounts -T {params.nthreads} -p --countReadPairs -t {params.dtype} -g {params.geneid} --fracOverlap {params.overlap} -a {params.gtf} -o {output.bam} {output.counts}
         rm -rf -R {TEMPDIR}"""
