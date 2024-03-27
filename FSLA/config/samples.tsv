@@ -1,9 +1,9 @@
-sampleName	run	cond	cell	sample	path
-P3160_FSLA_14P25_c1_S19_L001_R1_001.fastq.gz	P3160	14P25	c1	S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c1_S19_L002_R1_001.fastq.gz	P3160	14P25	c1	S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c1_S19_L001_R2_001.fastq.gz	P3160	14P25	c1	S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c1_S19_L002_R2_001.fastq.gz	P3160	14P25	c1	S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c2_S20_L001_R1_001.fastq.gz	P3160	14P25	c2	S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c2_S20_L002_R1_001.fastq.gz	P3160	14P25	c2	S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c2_S20_L001_R2_001.fastq.gz	P3160	14P25	c2	S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
-P3160_FSLA_14P25_c2_S20_L002_R2_001.fastq.gz	P3160	14P25	c2	S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+sampleName	run	cond	cell	sample	name	path
+P3160_FSLA_14P25_c1_S19_L001_R1_001.fastq.gz	P3160	14P25	c1	S19	P3160_FSLA_14P25_c1_S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c1_S19_L002_R1_001.fastq.gz	P3160	14P25	c1	S19	P3160_FSLA_14P25_c1_S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c1_S19_L001_R2_001.fastq.gz	P3160	14P25	c1	S19	P3160_FSLA_14P25_c1_S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c1_S19_L002_R2_001.fastq.gz	P3160	14P25	c1	S19	P3160_FSLA_14P25_c1_S19	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c2_S20_L001_R1_001.fastq.gz	P3160	14P25	c2	S20	P3160_FSLA_14P25_c2_S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c2_S20_L002_R1_001.fastq.gz	P3160	14P25	c2	S20	P3160_FSLA_14P25_c2_S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c2_S20_L001_R2_001.fastq.gz	P3160	14P25	c2	S20	P3160_FSLA_14P25_c2_S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
+P3160_FSLA_14P25_c2_S20_L002_R2_001.fastq.gz	P3160	14P25	c2	S20	P3160_FSLA_14P25_c2_S20	/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/FS_LA/
