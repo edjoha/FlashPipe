@@ -1,0 +1,35 @@
+
+# -- 1. Samples configuration -- #
+samples: "config/samples.tsv"
+temp: "/data/gpfs-1/users/hedler_m/scratch/fsla"
+out: "/data/gpfs-1/users/hedler_m/ag_ludwig/work/FSLA" 
+
+# -- 2. Analysis parameters -- #
+# --- a. (optional) cat reads from different lanes --- #
+cat:
+  enable: TRUE
+
+# --- b. STAR --- #
+star:
+  threads: 30
+  RAMlimit: 20000000000
+  genomeLoad: LoadAndKeep
+  genomeDir: "/data/gpfs-1/users/hedler_m/work/STAR_indexed_genome"
+  readfiles: zcat
+  insertlimit: 2000000
+  filter: RemoveNoncanonicalUnannotated
+  outdtype: BAM SortedByCoordinate
+  prefix: "{TEMPDIR}/tmp/bam/out/{sample}_"
+
+# --- c. samtools --- #
+samtools:
+    threads: 30
+    flag: 260
+
+# --- d. featurecounts --- #
+featurecounts:
+    GTF: "/data/gpfs-1/users/hedler_m/ag_ludwig/work/P3160_20230530/fastqs_core/human_ref/gencode.v43.primary_assembly.basic.annotation.gtf"
+    overlap: 0.25
+    datatype: exon
+    nthreads: 1
+    geneidentifier: gene_name

@@ -1,8 +1,8 @@
 # Flash⚡Pipe
-– a snakemake based analysis pipeline for FlashSeq data
+– a Snakemake based analysis pipeline for Flash-Seq data
 
 ## Purpose
-
+This pipeline was developed 
 
 
 ## How to use

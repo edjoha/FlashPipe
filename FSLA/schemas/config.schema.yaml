@@ -1,0 +1,90 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+description: snakemake configuration file
+
+type: object
+
+# possible entries of the config file and which type they should be
+properties:
+  samples:
+    type: string
+  temp:
+    type: string
+  out:
+    type: string
+
+  cat:
+    type: object
+    properties:
+      enable:
+        type: boolean
+    required:
+      - enable
+
+  star:
+    type: object
+    properties:
+      threads:
+        type: number
+      RAMlimit:
+        type: number
+      genomeLoad:
+        type: string
+      genomeDir:
+        type: string
+      readfiles:
+        type: string
+      insertlimit:
+        type: number
+      filter:
+        type: string
+      outdtype:
+        type: string
+      prefix:
+        type: string
+    required:
+      - threads
+      - RAMlimit
+      - genomeLoad
+      - genomeDir
+      - readfiles
+      - insertlimit
+      - filter
+      - outdtype
+      - prefix
+
+  samtools:
+    type: object
+    properties:
+      threads:
+        type: number
+      flag:
+        type: number
+    required:
+      - threads
+      - flag
+
+  featurecounts:
+    type: object
+    properties:
+      GTF:
+        type: string
+      overlap:
+        type: number
+      datatype:
+        type: string
+      nthreads:
+        type: number
+      geneidentifier:
+        type: string
+    required:
+      - GTF
+      - overlap
+      - nthreads
+      - geneidentifier
+
+# entries that have to be in the config file for successful validation
+required:
+  - samples
+  - temp
+  - out
