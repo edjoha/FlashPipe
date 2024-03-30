@@ -28,12 +28,13 @@ Example data was generated in the [Single Cell Focus Area](https://www.bihealth.
 
 ### GTF
 
-The GTF file was generated with [STAR](https://github.com/alexdobin/STAR) --genomeGenerate
-
+The GTF file was generated with [STAR](https://github.com/alexdobin/STAR) --genomeGenerate:
+```
 FASTA="../GRCh38.primary_assembly.genome.fa"
 GTF="../gencode.v43.primary_assembly.basic.annotation.gtf"
 
 STAR --runThreadN 15 --runMode genomeGenerate --genomeDir $OUTPUTDIR --genomeFastaFiles $FASTA --sjdbGTFfile $GTF --sjdbOverhang 79
+```
 
 Therefore, the latest release of the FASTA sequence file for the human genome was downloaded on [Gencode (Release 45 (GRCh38.p14)](https://www.gencodegenes.org/human/). Due to the file size limit on Github, **this file cannot be provided** here.
 
