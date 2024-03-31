@@ -1,8 +1,8 @@
 rule samtools:
     input:
-        "{TEMPDIR}/{run}/tmp/bam/out/FSLA_{cond}_{name}_Aligned.sortedByCoord.out.bam"   
+        "{TEMPDIR}/tmp/bam/out/{sample}_Aligned.sortedByCoord.out.bam"   
     output:
-        "{TEMPDIR}/{run}/tmp/bam/filtered/FSLA_{cond}_{name}_Aligned.sortedByCoord.filtered.bam"
+        "{TEMPDIR}/tmp/bam/filtered/{sample}_Aligned.sortedByCoord.filtered.bam"
     conda:
         "../envs/alignment.yaml"
     params:
@@ -14,10 +14,10 @@ rule samtools:
 
 rule star:
     input:
-        R1= "{TEMPDIR}/{run}/tmp/combfq/FSLA_{cond}_{name}_R1_001.comb.fastq.gz",
-        R2= "{TEMPDIR}/{run}/tmp/combfq/FSLA_{cond}_{name}_R2_001.comb.fastq.gz",
+        R1= "{TEMPDIR}/tmp/combfq/{sample}_R1_001.comb.fastq.gz",
+        R2= "{TEMPDIR}/tmp/combfq/{sample}_R2_001.comb.fastq.gz",
     output:
-        "{TEMPDIR}/{run}/tmp/bam/out/FSLA_{cond}_{name}_Aligned.sortedByCoord.out.bam"
+        "{TEMPDIR}/tmp/bam/out/{sample}_Aligned.sortedByCoord.out.bam"
     conda:
         "../envs/alignment.yaml"
     params:
