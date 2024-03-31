@@ -17,6 +17,5 @@ TEMPDIR = config["temp"]
 # -- Final output -- #
 rule all:
     input:
-        expand(["{TEMPDIR}/multiqc/multiqc_report.html","{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt"
-                ], sample=samples['sampleName'], TEMPDIR=TEMPDIR)
+        expand("{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt", sample=samples['sampleName'], TEMPDIR=TEMPDIR),"qc/multiqc_report.html"
 
