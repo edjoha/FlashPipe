@@ -2,7 +2,8 @@ rule counts:
     input:
         "{TEMPDIR}/tmp/bam/filtered/{sample}_Aligned.sortedByCoord.filtered.bam"
     output:
-        "{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt"
+        out="{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt"
+        qc="{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt.summary"
     conda:
         "../envs/subread.yaml"
     params:
@@ -13,5 +14,5 @@ rule counts:
         geneid=config['featurecounts']['geneidentifier']
     shell:
         """
-        featureCounts -T {params.nthreads} -p --countReadPairs -t {params.dtype} -g {params.geneid} --fracOverlap {params.overlap} -a {params.gtf} -o {output} {input}
+        featureCounts -T {params.nthreads} -p --countReadPairs -t {params.dtype} -g {params.geneid} --fracOverlap {params.overlap} -a {params.gtf} -o {output.out} {input}
         """
