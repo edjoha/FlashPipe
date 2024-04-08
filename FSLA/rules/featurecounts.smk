@@ -2,7 +2,7 @@ rule counts:
     input:
         "{TEMPDIR}/tmp/bam/filtered/{sample}_Aligned.sortedByCoord.filtered.bam"
     output:
-        out="{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt"
+        out="{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt",
         qc="{TEMPDIR}/counts/{sample}_ReadCount.featureCounts.gencode.txt.summary"
     conda:
         "../envs/subread.yaml"
