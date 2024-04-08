@@ -17,7 +17,8 @@ rule star:
         R1= "{TEMPDIR}/tmp/combfq/{sample}_R1_001.comb.fastq.gz",
         R2= "{TEMPDIR}/tmp/combfq/{sample}_R2_001.comb.fastq.gz",
     output:
-        "{TEMPDIR}/tmp/bam/out/{sample}_Aligned.sortedByCoord.out.bam"
+        out="{TEMPDIR}/tmp/bam/out/{sample}_Aligned.sortedByCoord.out.bam",
+        qc="{TEMPDIR}/tmp/bam/out/{sample}_Log.final.out"
     conda:
         "../envs/alignment.yaml"
     params:
